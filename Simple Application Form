@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Application Form</title>
+</head>
+<body>
+      <h2>Application Form</h2>
+          <form action="submit_form.php" method="post" onsubmit="return validateForm()">
+                <!-- Name Field with Required Validation -->
+                <label for="name">Full Name:</label><br>
+                <input type="text" id="name" name="name" required>
+                <br><br>
+                
+                <!-- Email Field with Pattern Validation -->
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required>
+                <br><br>
+        
+                <!-- Phone Number Field with Pattern Validation -->
+                <label for="phone">Phone Number (10 digits):</label><br>
+                <input type="phone" id="phone" name="phone" required>
+                <br><br>
+        
+                <!-- Age Field with Minimum and Maximum Value Validation -->
+                <label for="age">Age (18-60):</label><br>
+                <input type="number" id="age" name="age" min="18" max="60" required>
+                <br><br>
+        
+                <!-- Password Field with Length Validation -->
+                <label for="password">Password (min 6 characters):</label><br>
+                <input type="password" id="password" name="password" minlength="6" required>
+                <br><br>
+        
+                <!-- Submit Button -->
+                <input type="submit" value="Submit">
+            </form>
+        
+            <script>
+                function validateForm() {
+                    // Custom JavaScript Validation can be added here if needed
+                    return true; // Let the form be submitted if all HTML validations pass
+                }
+            </script>
+        
+        </body>
+        </html>
+        
+
+       
